@@ -5,15 +5,18 @@ const cors = require('cors')
 const userRoute = require('./routes/users.route')
 const authentication = require('./middlewares/authentication.middleware')
 const productRoute = require('./routes/products.route')
+const cartRoute = require('./routes/cart.route')
 const app = express()
 
 // ! middleware 
+
 app.use(cors())
 app.use(express.json())
 app.use('/users',userRoute)
 
-// app.use(authentication)
 app.use('/products',productRoute)
+// app.use(authentication)
+app.use('/cart',cartRoute)
 
 
 app.get('/',(req,res)=>res.send('homeroute Of backend'))
