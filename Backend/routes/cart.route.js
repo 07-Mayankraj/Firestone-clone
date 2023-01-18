@@ -1,17 +1,11 @@
 const express = require('express')
 const controller  = require('../controllers/cart.controller')
-const productRoute = express.Router()
+const cartRoute = express.Router()
 
-productRoute.get('/' , controller.getall)
-productRoute.post('/create', controller.create)
-productRoute.delete('/delete/:id', controller.delete)
-
-
-module.exports = productRoute
+cartRoute.get('/' , controller.getall)
+cartRoute.post('/add', controller.addtocart)
+cartRoute.delete('/delete/:id', controller.delete)
 
 
-// only user can access this route 
-// user will get data all data 
+module.exports = cartRoute
 
-// user will get only data added in cart
-// user will get only data added in cart
