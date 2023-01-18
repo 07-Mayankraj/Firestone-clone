@@ -1,12 +1,12 @@
 const productData = require('../config/productData')    // scrapped product data
-const productModel = require('../models/product.model')
+const ProductModel = require('../models/product.model')
 
 exports.getall = async(req,res) =>{
     const _id = req.params.id;
     let products;
     try {
-        if(_id)  products = await productModel.find({_id})
-        else  products = await productModel.find()
+        if (_id)  products = await ProductModel.find({_id})
+        else  products = await ProductModel.find()
         res.json(products)
     } catch (error) {
         res.json({msg : error.message})
@@ -17,7 +17,7 @@ exports.getall = async(req,res) =>{
 exports.create = async(req,res) =>{
     const { product_id,product_img,brand_img,product_name,average_rating,review_count,product_specs,stability,traction,dry_traction,ride_comfort,tire_wear,wet_traction,noise_level} = req.body;
     try {
-        const newproduct = new productModel({ product_id,product_img,brand_img,product_name,average_rating,review_count,product_specs,stability,traction,dry_traction,ride_comfort,tire_wear,wet_traction,noise_level})
+        const newproduct = new ProductModel({ product_id,product_img,brand_img,product_name,average_rating,review_count,product_specs,stability,traction,dry_traction,ride_comfort,tire_wear,wet_traction,noise_level})
         await newproduct.save()
         res.json({msg :" product created" })
         
@@ -32,7 +32,7 @@ exports.update = async(req,res) =>{
     const _id = req.params.id;
     const userID = req.body.userID;
     
-    const product = await productModel.find({_id})
+    const product = await ProductModel.find({_id})
     
     console.log(userID ,product);
     try {
@@ -40,7 +40,7 @@ exports.update = async(req,res) =>{
             res.json({msg : "usernote authorised"})
         }
         else{
-            const data  = await productModel.findByIdAndUpdate({_id},payload)
+            const data  = await ProductModel.findByIdAndUpdate({_id},payload)
             res.json({msg : "product updated"})
         }
         
@@ -54,7 +54,7 @@ exports.delete = async(req,res) =>{
     const _id = req.params.id;
     const userID = req.body.userID;
     
-    const product = await productModel.find({_id})
+    const product = await ProductModel.find({_id})
     
     console.log(userID ,product);
     try {
@@ -62,7 +62,7 @@ exports.delete = async(req,res) =>{
             res.json({msg : "usernote authorised"})
         }
         else{
-             await productModel.findByIdAndDelete({_id})
+             await ProductModel.findByIdAndDelete({_id})
             res.json({msg : "product deleted"})
         }
         
@@ -83,7 +83,7 @@ exports.addAllDuckingData = async(req,res) =>{
     try {
        
         
-        await productModel.insertMany(productData)
+        await ProductModel.insertMany(productData)
         res.json({msg :" product created" })
         
     } catch (error) {
