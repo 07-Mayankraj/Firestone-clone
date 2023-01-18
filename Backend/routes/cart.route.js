@@ -4,7 +4,6 @@ const productRoute = express.Router()
 
 productRoute.get('/' , controller.getall)
 productRoute.post('/create', controller.create)
-productRoute.patch('/update/:id', controller.update)
 productRoute.delete('/delete/:id', controller.delete)
 
 
