@@ -2,7 +2,7 @@ const CartModel = require('../models/cart.model');
 
 exports.getall = async(req,res) =>{
     try {
-        const products = await CartModel.find(  {userID : req.body.userID})
+        const products = await CartModel.find({userID : req.body.userID})
         res.json(products)
     } catch (error) {
         res.json({msg : error.message})
@@ -10,10 +10,14 @@ exports.getall = async(req,res) =>{
 }
 
 // add to cart 
-exports.create = async(req,res) =>{
-    const product = req.body;
+exports.addtocart = async(req,res) =>{
+    const productdata = req.body;
+    console.log(productdata);
     try {
-        const newproduct = new CartModel(product)
+        const product =  await CartModel.find({product_id: productdata.product_id})
+        console.log(product);
+        if(product.length > 0) return res.status(400).json({msg: "product already exists"})
+        const newproduct = new CartModel(productdata)
         await newproduct.save()
         res.json({msg :" product added to cart" })
         

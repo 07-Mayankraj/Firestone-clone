@@ -1,15 +1,17 @@
+# API endpoints
 ## user
-    login ->    localhost:3500//users/login    {post}
-    register -> localhost:3500//users/register  {post}
+    login ->    localhost:3500/users/login    {post}
+    register -> localhost:3500/users/register  {post}
 ## product
-    getall ->   localhost:3500/products/products
+    getall ->   localhost:3500/products/
     getById  ->   localhost:3500/products/:id
     update   ->   localhost:3500/products/update/:id
     delete   ->   localhost:3500/products/delete/:id
 
-    post    ->     localhost:3500/products/crete
     
 ## body for update or create new 
+    post    ->     localhost:3500/products/add
+
     {
     "product_id": 332,
     "product_img": "https://assets.firestonecompleteautocare.com/content/dam/bsro-sites/global/images/tires/full-60/h175/TuranzaEL40002RFT.png",
@@ -28,3 +30,8 @@
     "__v": 0
     }
 
+## cart
+    getall ->   localhost:3500/cart/
+    add    ->   localhost:3500/cart/add
+    delete ->   localhost:3500/cart/delete/:id
+    
