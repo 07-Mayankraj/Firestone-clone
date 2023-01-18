@@ -19,6 +19,6 @@ const productSchema = mongoose.Schema({
     userID : String
 })
 
-const productModel = mongoose.model('product', productSchema)
+const ProductModel = mongoose.model('product', productSchema)
 
-module.exports = productModel;
+module.exports = ProductModel;
