@@ -6,6 +6,7 @@ productRoute.get('/' , controller.getall)
 productRoute.get('/:id' , controller.getall)
 
 productRoute.post('/create', controller.create)
+
 productRoute.post('/addAllDuckingData', controller.addAllDuckingData)
 
 productRoute.patch('/update/:id', controller.update)
