@@ -1,26 +1,49 @@
 const productData = require('../config/productData')    // scrapped product data
 const ProductModel = require('../models/product.model')
 
-exports.getone = async(req,res) =>{
-    const _id = req.params.id;
+// exports.getall = async(req,res) =>{
+//     const _id = req.params.id;
+//     let products;
+//     try {
+//         if (_id)  products = await ProductModel.find({_id})
+//         else  products = await ProductModel.find(req.query)
+//         res.json(products)
+//     } catch (error) {
+//         res.json({msg : error.message})
+//     }
+// }
+exports.getall = async(req,res) =>{
     let products;
+    const _id = req.params.id;
+    
+    // take out key from query
+    let objKey;
+    for( key in req.query ) objKey = key
+
     try {
         if (_id)  products = await ProductModel.find({_id})
-        else  products = await ProductModel.find()
+        else  products = await ProductModel.find({[objKey] : {$regex: req.query[objKey],$options:'i'}})
+        console.log( objKey, req.query[objKey]);
         res.json(products)
     } catch (error) {
         res.json({msg : error.message})
     }
 }
 
-exports.getall = async(req,res) =>{
-    try { 
-        let products = await ProductModel.find(req.query)
+exports.filterproducts = async(req,res) =>{
+    // take out key from query
+    let objKey;
+    for( key in req.query ) objKey = key
+    console.log(objKey);
+    try {
+        const products = await ProductModel.find().sort({[objKey]:1})
         res.json(products)
     } catch (error) {
         res.json({msg : error.message})
     }
 }
+
+
 
 // only admin panel will have this access
 exports.create = async(req,res) =>{
@@ -33,8 +56,6 @@ exports.create = async(req,res) =>{
         res.json({msg : error.message })
     }
 }
-
-
 exports.update = async(req,res) =>{
     const payload = req.body;
     const _id = req.params.id;
