@@ -1,7 +1,7 @@
 const productData = require('../config/productData')    // scrapped product data
 const ProductModel = require('../models/product.model')
 
-exports.getall = async(req,res) =>{
+exports.getone = async(req,res) =>{
     const _id = req.params.id;
     let products;
     try {
@@ -13,11 +13,19 @@ exports.getall = async(req,res) =>{
     }
 }
 
+exports.getall = async(req,res) =>{
+    try { 
+        let products = await ProductModel.find(req.query)
+        res.json(products)
+    } catch (error) {
+        res.json({msg : error.message})
+    }
+}
+
 // only admin panel will have this access
 exports.create = async(req,res) =>{
-    const { product_id,product_img,brand_img,product_name,average_rating,review_count,product_specs,stability,traction,dry_traction,ride_comfort,tire_wear,wet_traction,noise_level} = req.body;
     try {
-        const newproduct = new ProductModel({ product_id,product_img,brand_img,product_name,average_rating,review_count,product_specs,stability,traction,dry_traction,ride_comfort,tire_wear,wet_traction,noise_level})
+        const newproduct = new ProductModel(req.body)
         await newproduct.save()
         res.json({msg :" product created" })
         
