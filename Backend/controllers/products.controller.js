@@ -23,7 +23,6 @@ exports.getall = async(req,res) =>{
     try {
         if (_id)  products = await ProductModel.find({_id})
         else  products = await ProductModel.find({[objKey] : {$regex: req.query[objKey],$options:'i'}})
-        console.log( objKey, req.query[objKey]);
         res.json(products)
     } catch (error) {
         res.json({msg : error.message})
@@ -34,7 +33,6 @@ exports.filterproducts = async(req,res) =>{
     // take out key from query
     let objKey;
     for( key in req.query ) objKey = key
-    console.log(objKey);
     try {
         const products = await ProductModel.find().sort({[objKey]:1})
         res.json(products)
@@ -63,7 +61,6 @@ exports.update = async(req,res) =>{
     
     const product = await ProductModel.find({_id})
     
-    console.log(userID ,product);
     try {
         if(userID !== product[0].userID){
             res.json({msg : "usernote authorised"})
@@ -85,7 +82,6 @@ exports.delete = async(req,res) =>{
     
     const product = await ProductModel.find({_id})
     
-    console.log(userID ,product);
     try {
         if(userID !== product[0].userID){
             res.json({msg : "usernote authorised"})
