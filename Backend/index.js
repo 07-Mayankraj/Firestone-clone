@@ -8,17 +8,17 @@ const productRoute = require('./routes/products.route')
 const cartRoute = require('./routes/cart.route')
 const app = express()
 
-// ! middleware 
-
+// middlewares
 app.use(cors())
 app.use(express.json())
+// routers
 app.use('/users',userRoute)
-
 app.use('/products',productRoute)
-// app.use(authentication)
+// protected routes
+app.use(authentication)
 app.use('/cart',cartRoute)
 
-
+// default route
 app.get('/',(req,res)=>res.send('homeroute Of backend'))
 
 app.listen(process.env.port,()=>{
