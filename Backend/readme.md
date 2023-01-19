@@ -3,10 +3,12 @@
     login ->    localhost:3500/users/login    {post}
     register -> localhost:3500/users/register  {post}
 ## product
-    getall ->   localhost:3500/products/
-    getById  ->   localhost:3500/products/:id
-    update   ->   localhost:3500/products/update/:id
-    delete   ->   localhost:3500/products/delete/:id
+    getall      ->   localhost:3500/products/
+    getById     ->   localhost:3500/products/:id
+    update      ->   localhost:3500/products/update/:id
+    delete      ->   localhost:3500/products/delete/:id
+    filter      ->   localhost:3500/products/filter?product_rating
+    find qurey  ->   localhost:3500/products/?product_name=1212121212121212raj (anything from schema)
 
     
 ## body for update or create new 

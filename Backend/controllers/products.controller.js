@@ -1,23 +1,52 @@
 const productData = require('../config/productData')    // scrapped product data
 const ProductModel = require('../models/product.model')
 
+// exports.getall = async(req,res) =>{
+//     const _id = req.params.id;
+//     let products;
+//     try {
+//         if (_id)  products = await ProductModel.find({_id})
+//         else  products = await ProductModel.find(req.query)
+//         res.json(products)
+//     } catch (error) {
+//         res.json({msg : error.message})
+//     }
+// }
 exports.getall = async(req,res) =>{
-    const _id = req.params.id;
     let products;
+    const _id = req.params.id;
+    
+    // take out key from query
+    let objKey;
+    for( key in req.query ) objKey = key
+
     try {
         if (_id)  products = await ProductModel.find({_id})
-        else  products = await ProductModel.find()
+        else  products = await ProductModel.find({[objKey] : {$regex: req.query[objKey],$options:'i'}})
         res.json(products)
     } catch (error) {
         res.json({msg : error.message})
     }
 }
 
+exports.filterproducts = async(req,res) =>{
+    // take out key from query
+    let objKey;
+    for( key in req.query ) objKey = key
+    try {
+        const products = await ProductModel.find().sort({[objKey]:1})
+        res.json(products)
+    } catch (error) {
+        res.json({msg : error.message})
+    }
+}
+
+
+
 // only admin panel will have this access
 exports.create = async(req,res) =>{
-    const { product_id,product_img,brand_img,product_name,average_rating,review_count,product_specs,stability,traction,dry_traction,ride_comfort,tire_wear,wet_traction,noise_level} = req.body;
     try {
-        const newproduct = new ProductModel({ product_id,product_img,brand_img,product_name,average_rating,review_count,product_specs,stability,traction,dry_traction,ride_comfort,tire_wear,wet_traction,noise_level})
+        const newproduct = new ProductModel(req.body)
         await newproduct.save()
         res.json({msg :" product created" })
         
@@ -25,8 +54,6 @@ exports.create = async(req,res) =>{
         res.json({msg : error.message })
     }
 }
-
-
 exports.update = async(req,res) =>{
     const payload = req.body;
     const _id = req.params.id;
@@ -34,7 +61,6 @@ exports.update = async(req,res) =>{
     
     const product = await ProductModel.find({_id})
     
-    console.log(userID ,product);
     try {
         if(userID !== product[0].userID){
             res.json({msg : "usernote authorised"})
@@ -56,7 +82,6 @@ exports.delete = async(req,res) =>{
     
     const product = await ProductModel.find({_id})
     
-    console.log(userID ,product);
     try {
         if(userID !== product[0].userID){
             res.json({msg : "usernote authorised"})

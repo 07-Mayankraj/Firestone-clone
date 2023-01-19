@@ -12,10 +12,8 @@ exports.getall = async(req,res) =>{
 // add to cart 
 exports.addtocart = async(req,res) =>{
     const productdata = req.body;
-    console.log(productdata);
     try {
         const product =  await CartModel.find({product_id: productdata.product_id})
-        console.log(product);
         if(product.length > 0) return res.status(400).json({msg: "product already exists"})
         const newproduct = new CartModel(productdata)
         await newproduct.save()
@@ -29,6 +27,7 @@ exports.addtocart = async(req,res) =>{
 
 // product delete from cart
 exports.delete = async(req,res) =>{
+    
     const _id = req.params.id;
     const userID = req.body.userID;
     
