@@ -1,0 +1,20 @@
+#container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.product-details{
+    width: 80%;
+    margin: auto;
+    background-color:red;
+}
+.product-data{
+    
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: 30%;
+    margin: 50px auto;
+}
