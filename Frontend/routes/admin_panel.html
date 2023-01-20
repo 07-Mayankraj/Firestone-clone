@@ -7,15 +7,19 @@
     <title> Admin Dashboard - Home</title>
     <meta name="description" content="">
     <meta name="author" content="templatemo">
-    <!-- 
-    Visual Admin Template
-    https://templatemo.com/tm-455-visual-admin
-    -->
+
+
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,700' rel='stylesheet' type='text/css'>
     <link href="../css/font-awesome.min.css" rel="stylesheet">
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/templatemo-style.css" rel="stylesheet">
+    <!-- custom css -->
+    <link rel="stylesheet" href="../css/admin_page.css">
+    <!-- bootsrap -->
     
+
+    
+    <script src="https://cdn.lordicon.com/fudrjiwc.js"></script>
   
 
   </head>
@@ -28,7 +32,7 @@
           <h1>Admin</h1>
         </header>
         <div class="profile-photo-container">
-          <img src="images/profile-photo.jpg" alt="Profile Photo" class="img-responsive">  
+          <img src="../resources/propic.jpg" alt="Profile Photo" class="img-responsive">  
           <div class="profile-photo-overlay"></div>
         </div>      
         <!-- Search box -->
@@ -38,18 +42,27 @@
         </div>
         <nav class="templatemo-left-nav">          
           <ul>
-            <li><a href="#" class="active"><i class="fa fa-home fa-fw"></i>Dashboard</a></li>
+            <li><a href="admin_panel.html" class="active"><i class="fa fa-home fa-fw"></i>Dashboard</a></li>
             <li><a href="manage-users.html"><i class="fa fa-users fa-fw"></i>Manage Users</a></li>
           </ul>  
         </nav>
       </div>
       <!-- Main content --> 
-      <div class="templatemo-content col-1 light-gray-bg">
+      <div class="templatemo-content col-1  light-gray-bg">
+        <div class="dummyimages">
         
+            <img src="../resources/s1.png" alt="">
+            <img src="../resources/s1.png" alt="">
+            <img src="../resources/s1.png" alt="">
+        
+        </div>
+        <div class="product-data-display"></div>
       </div>
     </div>
     
     
-
+    <div class="pop-handler"></div>
   </body>
 </html>
+
+<script src="../scripts/adminPage.js" type="module"></script>
