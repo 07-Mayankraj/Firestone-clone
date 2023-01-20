@@ -1,0 +1,100 @@
+#footerconnect {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 95%;
+  height: 140px;
+  margin: auto;
+}
+#footerconnect > div {
+  width: 48%;
+  text-align: left;
+}
+#footersignup {
+  display: flex;
+
+  flex-direction: column;
+  padding: 10px;
+  justify-content: space-evenly;
+}
+#icons {
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+}
+#icons div {
+  /* border: 1px solid red; */
+  width: 40px;
+  height: 20px;
+  border-radius: 5px;
+  justify-content: space-between;
+  margin: auto;
+  gap: 5px;
+}
+#icons div img {
+  width: 100%;
+  margin: auto;
+  gap: 20px;
+}
+
+#signup {
+  margin: auto;
+  border: 1px solid black;
+  width: 20%;
+  padding: 10px;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 70px;
+  background-color: #333333;
+  color: white;
+  margin-left: 60px;
+}
+#signup:hover {
+  background-color: #28bdb7;
+  color: #333333;
+}
+#end {
+  margin-top: 80px;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+}
+#size > ul {
+  /* margin-top: 20px; */
+  list-style: none;
+  /* text-align: center; */
+  text-align: left;
+  line-height: 1px;
+}
+#size > ul li {
+  line-height: 2;
+  color: grey;
+  /* margin-right: 55px; */
+  padding-left: 0px;
+  transition: padding 0.3s;
+}
+#size > ul li:hover {
+  padding-left: 5px;
+  cursor: pointer;
+}
+#size h4 {
+  padding-left: 0px;
+  transition: padding 0.3s;
+}
+#size h4:hover {
+  color: grey;
+  padding-left: 5px;
+}
+#foterpara {
+  margin-top: 20px;
+}
+
+#size>h4{
+  margin-bottom: 40px;
+}
+.footer-hr-top{
+  margin: 50px 0;
+}
