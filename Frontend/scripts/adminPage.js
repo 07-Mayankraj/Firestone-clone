@@ -6,14 +6,34 @@ let popHandler = document.querySelector(".pop-handler");
 
 loading();
 
-
+async function fetchData() {
+  loading();
+  console.log("data loaded");
+  try {
+    let response = await fetch(`${baseURL}/products`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    if (response.ok) {
+      let product_data = await response.json();
+      console.log(product_data);
+      renderData(product_data);
+      hideLoading()
+    } else {
+      console.dir(response);
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
+fetchData();
 
 // card data
 
 //
-const data = await getProduct(localStorage.getItem("quick-data"))
 
-console.log(data);
 function getCard(data) {
   let formatedData = data.map((ele) => {
     return `
