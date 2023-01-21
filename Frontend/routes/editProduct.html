@@ -13,11 +13,12 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../css/edit.css">
+    <link rel="stylesheet" href="../css/admin_page.css">
     
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="./index.html">Update Product</a>
+      <a class="navbar-brand" href="../routes/admin_panel.html"> < Admin panel</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -38,18 +39,18 @@
       <div class="product-data">
         <form id="signupfrom">
           <div class="form-group">
-            <label for="exampleInputPassword1">Username</label>
+            <label for="exampleInputPassword1">Product name</label>
             <input
               type="text"
               class="form-control"
               id="username"
               required
               name="username"
-              placeholder="username"
+              placeholder="Product name"
             />
           </div>
           <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
+            <label for="exampleInputEmail1">Rating </label>
             <input
               type="email"
               name="email"
@@ -57,67 +58,101 @@
               id="email"
               required
               aria-describedby="emailHelp"
-              placeholder="Enter email"
+              placeholder="Enter Rating"
             />
-            <small id="emailHelp" class="form-text text-muted"
-              >We'll never share your email with anyone else.</small
-            >
-          </div>
-          <div class="form-group role">
-            <select name="role" id="role" required for="exampleInputPassword1">
-              <option value="role">Role</option>
-              <option value="Admin">Admin</option>
-              <option value="Explore">Explore</option>
-            </select>
           </div>
           <div class="form-group">
-            <label for="exampleInputPassword1">Location</label>
+            <label for="exampleInputPassword1">Product Specs</label>
             <input
               type="text"
               name="location"
               class="form-control"
               required
               id="location"
-              placeholder="location"
+              placeholder="Product Specs"
             />
           </div>
 
           <div class="form-group">
-            <label for="exampleInputPassword1">DOB</label>
+            <label for="exampleInputPassword1">Performance </label>
             <input
-              type="date"
+              type="number"
               name="DOB"
               class="form-control"
               required
               id="dob"
-              placeholder="DOB"
+              placeholder="Performance "
             />
           </div>
           <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
+            <label for="exampleInputPassword1">levels</label>
             <input
-              type="password"
+              type="text"
               name="password"
               class="form-control"
               required
               id="password"
-              placeholder="Password"
+              placeholder="levels"
             />
           </div>
 
           <div class="form-group">
-            <label for="exampleInputPassword1">Confirm_passwrd</label>
+            <label for="exampleInputPassword1">Noise Level</label>
             <input
-              type="password"
+              type="text"
               name="confirm_password"
               class="form-control"
               required
               id="confirm_password"
-              placeholder="Password"
+              placeholder="Noise Level"
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Dry Traction</label>
+            <input
+              type="text"
+              name="confirm_password"
+              class="form-control"
+              required
+              id="confirm_password"
+              placeholder="Dry Traction"
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Ride comfort</label>
+            <input
+              type="text"
+              name="confirm_password"
+              class="form-control"
+              required
+              id="confirm_password"
+              placeholder="Ride comfort"
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Tire wear</label>
+            <input
+              type="text"
+              name="confirm_password"
+              class="form-control"
+              required
+              id="confirm_password"
+              placeholder="Tire wear"
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">wet traction</label>
+            <input
+              type="text"
+              name="confirm_password"
+              class="form-control"
+              required
+              id="confirm_password"
+              placeholder="wet traction"
             />
           </div>
 
-          <button type="submit" class="btn btn-outline-dark">Submit</button>
+          <button type="submit" class="btn btn-outline-danger btn-block">Submit</button>
         </form>
       </div>
      
