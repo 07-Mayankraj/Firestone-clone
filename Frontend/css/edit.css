@@ -1,20 +1,31 @@
 #container {
   width: 80%;
-  margin: auto;
+  margin: 50px auto;
   display: flex;
   justify-content: space-evenly;
 }
 
-.product-details{
-    width: 80%;
-    margin: auto;
-    background-color:red;
+.product-details {
+  width: 50%;
+  margin: 20px;
 }
-.product-data{
-    
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    width: 30%;
-    margin: 50px auto;
+.product-details div {
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid grey;
+  margin: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+}
+
+.product-data {
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  width: 40%;
+  margin: 50px auto;
+}
+
+.dimage {
+  width: 20%;
 }
