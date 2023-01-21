@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update product</title>
+    <link rel="stylesheet" href="./styleloginsignup.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/edit.css">
+    <link rel="stylesheet" href="../css/admin_page.css">
+    
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="../routes/admin_panel.html"> < Admin panel</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
+    <div id="container">
+        <div class="product-details">
+            
+        </div>
+
+      <div class="product-data">
+        <form id="signupfrom">
+          <div class="form-group">
+            <label for="exampleInputPassword1">Product name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="username"
+              required
+              name="username"
+              placeholder="Product name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Rating </label>
+            <input
+              type="email"
+              name="email"
+              class="form-control"
+              id="email"
+              required
+              aria-describedby="emailHelp"
+              placeholder="Enter Rating"
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Product Specs</label>
+            <input
+              type="text"
+              name="location"
+              class="form-control"
+              required
+              id="location"
+              placeholder="Product Specs"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputPassword1">Performance </label>
+            <input
+              type="number"
+              name="DOB"
+              class="form-control"
+              required
+              id="dob"
+              placeholder="Performance "
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">levels</label>
+            <input
+              type="text"
+              name="password"
+              class="form-control"
+              required
+              id="password"
+              placeholder="levels"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputPassword1">Noise Level</label>
+            <input
+              type="text"
+              name="confirm_password"
+              class="form-control"
+              required
+              id="confirm_password"
+              placeholder="Noise Level"
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Dry Traction</label>
+            <input
+              type="text"
+              name="confirm_password"
+              class="form-control"
+              required
+              id="confirm_password"
+              placeholder="Dry Traction"
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Ride comfort</label>
+            <input
+              type="text"
+              name="confirm_password"
+              class="form-control"
+              required
+              id="confirm_password"
+              placeholder="Ride comfort"
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Tire wear</label>
+            <input
+              type="text"
+              name="confirm_password"
+              class="form-control"
+              required
+              id="confirm_password"
+              placeholder="Tire wear"
+            />
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">wet traction</label>
+            <input
+              type="text"
+              name="confirm_password"
+              class="form-control"
+              required
+              id="confirm_password"
+              placeholder="wet traction"
+            />
+          </div>
+
+          <button type="submit" class="btn btn-outline-danger btn-block">Submit</button>
+        </form>
+      </div>
+     
+    </div>
+    <div class="pop-handler"></div>
+  </body>
+</html>
+<script
+  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+  crossorigin="anonymous"
+></script>
+<script type="module" src="../scripts/updateProduct.js"></script>
