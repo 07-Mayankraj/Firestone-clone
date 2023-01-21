@@ -59,7 +59,10 @@
   display: flex;
 }
 
-
+.notification-loding{
+  left: 28%;
+  margin-top: 200px;
+}
 
 
 .red{
