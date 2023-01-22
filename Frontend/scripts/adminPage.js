@@ -1,8 +1,9 @@
+import hideLoading from "../components/hideLoading.components.js";
 import loading from "../components/loading.components.js";
+
 const baseURL = "https://rich-ruby-kitten-toga.cyclic.app";
 
 // fetching html tags
-let popHandler = document.querySelector(".pop-handler");
 
 loading();
 
@@ -30,9 +31,7 @@ async function fetchData() {
 }
 fetchData();
 
-// card data
 
-//
 
 function getCard(data) {
   let formatedData = data.map((ele) => {
@@ -148,7 +147,4 @@ let getProduct = async (id) => {
 };
 
 
-//  hide laoding animations
-function hideLoading(){
-  popHandler.innerHTML = null
-}
+

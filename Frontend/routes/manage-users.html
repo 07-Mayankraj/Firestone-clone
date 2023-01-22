@@ -12,37 +12,51 @@
     <link href="../css/font-awesome.min.css" rel="stylesheet">
     <link src="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/templatemo-style.css" rel="stylesheet">
-    
+    <link rel="stylesheet" href="../css/userpanel.css">
+    <script src="https://cdn.lordicon.com/fudrjiwc.js"></script>
 
   </head>
   <body>  
     <!-- Left column -->
-    <div class="templatemo-flex-row">
-      <div class="templatemo-sidebar">
-        <header class="templatemo-site-header">
-          <div class="square"></div>
-          <h1>Admin</h1>
-        </header>
-        <div class="profile-photo-container">
-          <img src="../resources/propic.jpg" width="60%" style="margin: auto;" alt="Profile Photo" class="img-responsive">  
-          <div class="profile-photo-overlay"></div>
-        </div>      
-       
-        <nav class="templatemo-left-nav">          
-          <ul>
-            <li><a href="admin_panel.html" class="active"><i class="fa fa-home fa-fw"></i>Dashboard</a></li>
-            <li><a href="manage-users.html"><i class="fa fa-users fa-fw"></i>Manage Users</a></li>
-          </ul>  
-        </nav>
-      </div>
-      <!-- Main content --> 
-      <div class="templatemo-content col-1 light-gray-bg">
-        
-      </div>
+   
+      <div style="height: 100vh;" class="templatemo-flex-row divvvvv">
+        <div class="templatemo-sidebar">
+          <header class="templatemo-site-header">
+            <div class="square"></div>
+            <h1>Admin</h1>
+          </header>
+          <div class="profile-photo-container">
+            <img src="../resources/propic.jpg" width="60%" style="margin: auto;" alt="Profile Photo" class="img-responsive">  
+            <div class="profile-photo-overlay"></div>
+          </div>      
+         
+          <nav class="templatemo-left-nav">          
+            <ul>
+              <li><a href="admin_panel.html" class="active"><i class="fa fa-home fa-fw"></i>Dashboard</a></li>
+              <li><a href="manage-users.html"><i class="fa fa-users fa-fw"></i>Manage Users</a></li>
+            </ul>  
+          </nav>
+        </div>
+        <!-- Main content --> 
+        <div class="templatemo-content col-1 light-gray-bg">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>user_id</th>
+                <th>delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Append the elements here using JS and DOM  -->
+            </tbody>
+        </div>
+  
+      
+      <div style=" position: relative;" class="pop-handler"></div>
     </div>
-    
-    <div class="pop-handler"></div>
   </body>
 </html>
 
-<script src="../scripts/manage_user_Page.js"></script>
+<script src="../scripts/users.js" type="module"></script>
