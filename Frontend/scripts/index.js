@@ -1,10 +1,18 @@
 import { footer } from "../components/footer.js";
 import navbar from "../components/navbar.components.js";
 
+import loading from "../components/loading.components.js";
+import hideLoading from "../components/hideLoading.components.js";
+let popHandler = document
+loading()
 
-console.log(footer());
+// navbar
+
+let naverbarDiv = document.querySelector('.navbar-section')
+naverbarDiv.innerHTML = navbar()
+
 // footer 
 let footerDiv = document.querySelector('.footer');
-// let naverbarDiv = document.querySelector('#main-navbar')
-naverbarDiv.innerHTML = navbar()
 footerDiv.innerHTML = footer()
+
+hideLoading()
