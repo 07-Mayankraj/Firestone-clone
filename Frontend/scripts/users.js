@@ -1,8 +1,8 @@
 import loading from "../components/loading.components.js";
 import hideLoading from "../components/hideLoading.components.js";
-
-
 let tbody = document.querySelector('tbody');
+
+
 console.log(tbody);
 
 // const fetchNote = async() =>{
