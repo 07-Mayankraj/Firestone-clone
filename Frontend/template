@@ -1,0 +1,9 @@
+// animation functions
+import loading from "../components/loading.components.js";
+import hideLoading from "../components/hideLoading.components.js";
+
+
+// in html write this 
+<script src="https://cdn.lordicon.com/fudrjiwc.js"></script>
+<div  style="width: 100%;" class="pop-handler"></div>
+
