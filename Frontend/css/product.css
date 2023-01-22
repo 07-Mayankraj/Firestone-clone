@@ -1,0 +1,94 @@
+.product-data-display{
+    margin-left: 50px;
+    display: grid;
+    width: 90%;
+    margin-top: 50px;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    
+}
+.topbtns{
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+}
+.product-page-heaidng{
+    width: 90%;
+    margin : 100px auto 20px auto ;
+    
+}
+
+.product-cards{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 10px;    
+    padding: 20px;
+    border-radius: 10px;
+}
+.product-cards div{    
+    margin: 10px 0;
+}
+
+.pimage{
+    width: 40%;
+}
+.dummyimages{
+    display: flex;
+    margin: 50px ;
+}
+
+.top-btn{
+    
+    margin: 10px 0;
+    border: 1px solid rgb(197, 197, 197);
+    background-color: rgb(197, 197, 197);
+    font-weight: normal;
+    padding: 10px 45px;
+}
+.edit-btn{
+    margin: 20px 0;
+    display: block;
+    width: 100%;
+    border: 1px solid #d81d05;
+    background-color: #d81d05;
+    color: #fff;
+    font-weight: normal;
+    padding: 8px 11px;
+}
+
+
+
+.maindiv{
+    display: flex;
+    margin: auto;
+
+}
+
+.filter{
+    margin: 100px 0;
+    width: 40%;
+}
+.filter ul{
+list-style: none;
+text-align: left;
+}
+.filter h3{
+    margin-left: 10%;
+}
+
+
+/* @media all and (min-width: 768px) and (max-width: 1024px) {} */
+@media all and (min-width: 320px) and (max-width: 767px)  {
+    .product-data-display{
+        grid-template-columns: repeat(3,1fr);
+        
+    }
+}
+@media all and (min-width:   0px) and (max-width: 320px)  {
+
+    .product-data-display{
+        grid-template-columns: repeat(2,1fr);
+        
+    }
+}

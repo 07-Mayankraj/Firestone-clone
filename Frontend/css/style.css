@@ -85,3 +85,13 @@
   list-style-type: none;
   display: block;
 }
+.midpart{
+  width: 100%;
+  margin: auto;
+
+}
+
+.midpart  img{
+  width: 100%;
+
+}
