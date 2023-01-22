@@ -1,0 +1,243 @@
+* {
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+  }
+
+.navbar {
+    margin: auto;
+    height: 100px;
+    display: grid;
+    grid-template-columns: 0.8fr 4fr 1fr 3fr;
+    gap: 20px;
+    position: relative;
+}
+/* mega menu -------------------------------------------- */
+.mega-menu {
+    margin: auto;
+    padding: 50px 0;
+    position: absolute;
+    border-radius: 10px;
+    background-color: white;
+    width: 100%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    top: 120%;
+    left: 0;
+    opacity: 0;
+    display: flex;
+    flex-wrap: wrap;
+    visibility: hidden;
+    transition: 0.5s;
+    
+}
+.heading-links-list>li:hover .mega-menu {
+    top: 100%;
+    opacity: 1;
+    z-index: 1;
+    visibility: visible;
+
+}
+
+/* megameu */
+.mega-menu-items{
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+    padding: 20px 50px;
+    width: 100%;
+}
+
+
+
+
+.mega-menu-items>div>ul {
+    margin-top: 20px;
+    list-style: none;
+}
+
+.mega-menu-items>div>ul li ,mega-menu-items>div>ul li a {
+    line-height: 2;
+    padding-left: 0px;
+    transition: padding 0.3s;
+}
+
+.mega-menu-items>div>ul li:hover {
+    padding-left: 5px;
+}
+
+.mega-menu-items h4 {
+    padding-left: 0px;
+    transition: padding 0.3s;
+    color: grey;
+}
+
+.mega-menu-items h4:hover {
+    color: rgb(83, 83, 92);
+    padding-left: 10px;
+}
+
+
+#resources-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    width: 100%;
+}
+#resources-grid>div{
+    width: 80%;
+    padding: 40px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 10px;
+}
+#resources-grid>div:hover{
+    background-color: rgba(0, 0, 0, 0.129);
+}
+/* -------------------------------------- */
+
+.nav-logo {
+    justify-content: space-evenly;
+    display: flex;
+    cursor: pointer;
+}
+
+.login-a {
+    display: block;
+    text-decoration: none;
+    color: rgb(62, 62, 62);
+
+}
+
+.login-a:hover {
+    color: orange;
+}
+
+#login:hover {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 5px 20px;
+    border-radius: 10px;
+}
+
+.navbar>div {
+    height: inherit;
+
+}
+
+.heading-links-list {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-evenly;
+    justify-items: center;
+}
+
+.heading-links {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.heading-links li>a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: black;
+
+}
+
+.second-div{
+    width: 70%;
+}
+
+.mega-menu-uls li a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+}
+#mega-menu-uls li a:hover {
+    text-decoration: none;
+    font-size: 1rem;
+    color: rgb(160, 160, 160);
+}
+
+.nav-right {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+.demo {
+    background-color: #ff7846;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 5px;
+    transition: hover 1s;
+    align-items: center;
+    transition: background-color 1s;
+}
+
+.demo:hover {
+    background-color: #ff77465d;
+}
+
+
+
+.megamenutire{
+    background-image: url("https://alsaeedigroup.com/wp-content/uploads/2018/02/alsaeedi-banner12.jpg");
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
