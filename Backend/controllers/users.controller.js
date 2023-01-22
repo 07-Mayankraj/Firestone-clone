@@ -36,13 +36,35 @@ exports.login = async (req, res) => {
     const { email, password } = req.body;
     try {
         const user = await UserModel.find({ email })
+        console.log(user);
         if (user.length !== 0) {
-            token = jwt.sign({ userID: user[0]._id }, JWT_SECRET_KEY, { expiresIn: '24h' })
-            // token sent
-            res.send({ "message": "login success", "Token" : `${token}` })
+            await bcrypt.compare(password, user[0].password, (err, success)=>{
+                if(success){
+                    token = jwt.sign({ userID: user[0]._id }, JWT_SECRET_KEY, { expiresIn: '24h' })
+                    // token sent
+                    res.json({ "message": "login success", "Token" : `${token}` })
+                } else {
+
+
+                    res.status(403).send({ "message": "Invalid Credentials"})
+                }
+            })
         }
         else{
             res.send('Wrong credentails')
+        }
+    } catch (error) {
+        res.json({error : error.message })
+    }
+}
+
+
+exports.allusers = async (req, res) => {
+    try {
+        const users = await UserModel.find()
+        if (users) res.json(users)
+        else{
+            res.send('No users found')
         }
     } catch (error) {
         res.json({error : error.message })

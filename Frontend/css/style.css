@@ -59,12 +59,39 @@
   display: flex;
 }
 
-.notification-loding{
+/* .notification-loding{
   left: 28%;
   margin-top: 200px;
-}
+} */
 
 
 .red{
   border: 1px solid red;
+}
+
+
+.filter-sec{
+  width: 20%;
+}
+.title{
+  background-color: rgb(223, 223, 223);
+  padding: 20px;
+}
+.categories{
+  padding: 20px;
+
+}
+.categories li,h2 {
+  list-style-type: none;
+  display: block;
+}
+.midpart{
+  width: 100%;
+  margin: auto;
+
+}
+
+.midpart  img{
+  width: 100%;
+
 }
