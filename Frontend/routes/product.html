@@ -1,44 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Product page</title>
-    <link rel="stylesheet" href="../css/footer.css" />
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/navbar.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div class="container">
-      <!-- naver -->
-      <div class="navbar-section"></div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product page</title>
+  <link rel="stylesheet" href="../css/footer.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/navbar.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="../css/product.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap" rel="stylesheet" />
+  <link rel="shortcut icon" href="../logo/fv.png" type="image/x-icon">
+
+</head>
+
+<body>
+  <div class="container">
+    <!-- naver -->
+    <div class="navbar-section"></div>
 
 
 
+    
 
+    <div class="maindiv">
+      <div class="filter">
+        <div class="categories">
+          <h2 class="title">Refine Your Results</h2>
+          <div class="category brand-filter type-category custom-selected">
+            <h3>Tire Brand</h3>
+            <ul class="item">
+              <li>
+                <div class="custom-checkbox">
+                  <input type="checkbox" id="filter-brand-1" value="brand--Bridgestone" class="filter-by-brand">
 
+                  <label for="filter-brand-1"><span>Bridgestone</span></label>
+                </div>
+              </li>
 
+              <li>
+                <div class="custom-checkbox">
+                  <input type="checkbox" id="filter-brand-2" value="brand--Firestone" class="filter-by-brand">
 
+                  <label for="filter-brand-2"><span>Firestone</span></label>
+                </div>
+              </li>
 
+              <li>
+                <div class="custom-checkbox">
+                  <input type="checkbox" id="filter-brand-3" value="brand--Primewell" class="filter-by-brand">
 
-      <!----------------- midpart ------------------->
-      <div style="width: 100%; height: 100vh;">
-      <div></div>
-      <!-- product display -->
-      <div></div>
+                  <label for="filter-brand-3"><span>Primewell</span></label>
+                </div>
+              </li>
 
+              <li>
+                <div class="custom-checkbox">
+                  <input type="checkbox" id="filter-brand-4" value="brand--Toyo" class="filter-by-brand">
+
+                  <label for="filter-brand-4"><span>Toyo</span></label>
+                </div>
+              </li>
+
+              <li>
+                <div class="custom-checkbox">
+                  <input type="checkbox" id="filter-brand-5" value="brand--SUREDRIVE" class="filter-by-brand">
+
+                  <label for="filter-brand-5"><span>SureDrive</span></label>
+                </div>
+              </li>
+            </ul>
+            <h3>Tire Type</h3>
+            <ul class="item">
+              <li>
+                <div class="custom-checkbox">
+
+                  <input type="checkbox" id="filter-type-1" value="All--Terrain--Tires" class="filter-by-type">
+                  <label for="filter-type-1"><span>All Terrain Tires</span></label>
+                </div>
+              </li>
+
+              <li>
+                <div class="custom-checkbox">
+
+                  <input type="checkbox" id="filter-type-2" value="CUVSUV--Highway--All-Season" class="filter-by-type">
+                  <label for="filter-type-2"><span>CUV/SUV Highway All-Season</span></label>
+                </div>
+              </li>
+
+              <li>
+                <div class="custom-checkbox">
+
+                  <input type="checkbox" id="filter-type-3" value="Car--&amp;--Minivan--All-Season"
+                    class="filter-by-type">
+                  <label for="filter-type-3"><span>Car &amp; Minivan All-Season</span></label>
+                </div>
+              </li>
+
+              <li>
+                <div class="custom-checkbox">
+
+                  <input type="checkbox" id="filter-type-4" value="Economy--Tires" class="filter-by-type">
+                  <label for="filter-type-4"><span>Economy Tires</span></label>
+                </div>
+              </li>
+
+              <li>
+                <div class="custom-checkbox">
+
+                  <input type="checkbox" id="filter-type-5" value="Highway--All-Season" class="filter-by-type">
+                  <label for="filter-type-5"><span>Highway All-Season</span></label>
+                </div>
+              </li>
+
+              <li>
+                <div class="custom-checkbox">
+
+                  <input type="checkbox" id="filter-type-6" value="Highway--Tires" class="filter-by-type">
+                  <label for="filter-type-6"><span>Highway Tires</span></label>
+                </div>
+              </li>
+
+              <li>
+                <div class="custom-checkbox">
+
+                  <input type="checkbox" id="filter-type-7" value="Mass--Market--Tires" class="filter-by-type">
+                  <label for="filter-type-7"><span>Mass Market Tires</span></label>
+                </div>
+              </li>
+
+              <li>
+                <div class="custom-checkbox">
+
+                  <input type="checkbox" id="filter-type-8" value="Max--Traction--Tires" class="filter-by-type">
+                  <label for="filter-type-8"><span>Max Traction Tires</span></label>
+                </div>
+              </li>
+
+              <li>
+                <div class="custom-checkbox">
+
+                  <input type="checkbox" id="filter-type-9" value="Performance--All-Season" class="filter-by-type">
+                  <label for="filter-type-9"><span>Performance All-Season</span></label>
+                </div>
+              </li>
+
+              <li>
+                <div class="custom-checkbox">
+
+                  <input type="checkbox" id="filter-type-10" value="Snow--Tires" class="filter-by-type">
+                  <label for="filter-type-10"><span>Snow Tires</span></label>
+                </div>
+              </li>
+
+              <li>
+                <div class="custom-checkbox">
+
+                  <input type="checkbox" id="filter-type-11" value="Snow--Tires-----Commercial--LT"
+                    class="filter-by-type">
+                  <label for="filter-type-11"><span>Snow Tires - Commercial LT</span></label>
+                </div>
+              </li>
+
+              <li>
+                <div class="custom-checkbox">
+
+                  <input type="checkbox" id="filter-type-12" value="Touring--HV/Z--Tires" class="filter-by-type">
+                  <label for="filter-type-12"><span>Touring H/V/Z Tires</span></label>
+                </div>
+              </li>
+
+              <li>
+                <div class="custom-checkbox">
+
+                  <input type="checkbox" id="filter-type-13" value="Ultra--High--Performance--All--Season"
+                    class="filter-by-type">
+                  <label for="filter-type-13"><span>Ultra High Performance All Season</span></label>
+                </div>
+              </li>
+
+              <li>
+                <div class="custom-checkbox">
+
+                  <input type="checkbox" id="filter-type-14" value="Ultra--High--Performance--Summer"
+                    class="filter-by-type">
+                  <label for="filter-type-14"><span>Ultra High Performance Summer</span></label>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div  class=" product-page-heaidng" >
+          <h3 style="color: blue;">SHOP TIRES</h3>
+          <p>Your ideal tires depend on several factors including the type of vehicle you own, your driving habits, and the road conditions you need to be prepared for. Browse all the tires Firestone Complete Auto Care has to offer, or filter to browse seasonal tires and search tires for specific types of vehicles.</p>
+        </div>
+        <div  class="topbtns">
+          <button class="top-btn" >CAR & MINIVAN</button>
+          <button class="top-btn" >PERFORMANCE</button>
+          <button class="top-btn" >SUV/CUV</button>
+          <button class="top-btn" >LIGHT TRUCK</button>
+          <button class="top-btn" >WINTER</button>
+          <button class="top-btn" >ALL TIRES</button>
+        </div>
+        <div class="product-data-display">
+      </div>
+      </div>
     </div>
-      <!------------------- footer ------------------->
-      <div class="footer"></div>
-    </div>
-  </body>
+
+
+
+       <!------------------- footer ------------------->
+    <div class="footer"></div>
+  </div>
+  <div style="width: 100%;" class="pop-handler"></div>
+
+</body>
+
 </html>
 
 <script src="../scripts/product.js" type="module"></script>
