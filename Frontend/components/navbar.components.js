@@ -14,7 +14,7 @@ const navbar = () => {
      <a href="#">Blog </a>
      <a href="#">Schedule an Appointment</a>
      <a href="#">Contact Us</a>
-     <a href="#">Create an Account</a>
+     <a href="../routes/signup.html">Create an Account</a>
      <a href="../routes/Login.html">Sign in</a>
    </div>
  </div>
@@ -22,7 +22,11 @@ const navbar = () => {
    <header>
      <nav class="navbar">
          <div class="nav-logo">
-             <img src="/logo/firewheel.png" alt="logo">
+         <a
+         href="../index.html">
+         <img style="width:80%" src="/logo/firewheel.png" alt="logo">
+         </a>
+          
          </div>
          <div class="heading-links">
              <ul class="heading-links-list">
@@ -34,19 +38,19 @@ const navbar = () => {
                                  <ul>
 
                                      <li> <a
-                                             href="./routes/product.html">
+                                             href="../routes/product.html">
                                              Shop Tires by Vehicle</a></li>
                                      <li> <a
-                                             href="./routes/product.html">
+                                             href="../routes/product.html">
                                              Shop Tires by Size</a></li>
                                      <li> <a
-                                             href="./routes/product.html">
+                                             href="../routes/product.html">
                                              Shop with Tire Decision Guide</a></li>
                                      <li> <a
-                                             href="./routes/product.html">
+                                             href="../routes/product.html">
                                              Shop Tires</a></li>
                                      <li> <a
-                                             href="./routes/product.html">
+                                             href="../routes/product.html">
                                              Tire Warranties</a></li>
                                  </ul>
                              </div>

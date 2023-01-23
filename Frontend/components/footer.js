@@ -101,7 +101,7 @@ let footer = () => {
       </ul>
     </div>
     <div>
-        <img width="80%" style="margin: 20px;" src="./resources/socialicons.png" alt="">
+        <img width="80%" style="margin: 20px;" src="../resources/socialicons.png" alt="">
     </div>
   </div>
 </div>

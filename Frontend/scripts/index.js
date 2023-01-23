@@ -16,3 +16,5 @@ let footerDiv = document.querySelector('.footer');
 footerDiv.innerHTML = footer()
 
 hideLoading()
+
+

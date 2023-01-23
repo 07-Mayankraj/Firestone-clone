@@ -60,14 +60,19 @@ function getCard(data) {
                 <div class=" product-title">
                     <p>${ele.product_name}</p>
                 </div>
-                <div class="product-price">
-                    <span class="product-price">${ele.review_count}</span>
-                </div>
+               
                 <div class="product-button">
                 <button type="button" id ="${ele._id}" class="btn edit-btn  btn-warning btn-block">GET QUOTE</button>
                 </div>
                 <div class="product-reviews">
-                        <p>⭐⭐⭐⭐&#160${ele.review_count}</p>
+                <p>${ele.product_specs}</p>
+                <p>${ele.traction}</p>
+                <p>${ele.noise_level}</p>
+                <p>${ele.wet_traction}</p>
+                <p>${ele.tire_wear}</p>
+                <p>${ele.ride_comfort}</p>
+                <p>${ele.dry_traction}</p>
+                <p>⭐⭐⭐⭐&#160${ele.review_count}</p>
                 </div>
             </div>
 
@@ -97,3 +102,66 @@ async function renderData(product_data) {
 
   
   }
+
+
+  let sorting_btn = document.querySelector("#sort-by");
+  sorting_btn.addEventListener("change", () => {
+  console.log(sorting_btn.value);
+  if (sorting_btn.value === "default") fetchData();
+
+  if (sorting_btn.value === "price-ases") {
+    let sort_url =
+      `${baseURL}/products/filter?stability`;
+      fetchSortedData(sort_url);
+    }
+    if (sorting_btn.value === "price-dses") {
+      let sort_url =
+      `${baseURL}/products/filter?review_count`;
+      fetchSortedData(sort_url);
+     
+  }
+  if (sorting_btn.value === "atoz") {
+    let sort_url =
+      `${baseURL}/products/filter?ride_comfort`;
+      fetchSortedData(sort_url);
+  }
+  if (sorting_btn.value === "ztoa") {
+    let sort_url =
+      `${baseURL}/products/filter?tire_wear`;
+      fetchSortedData(sort_url);
+  }
+});
+
+async function fetchSortedData(sort_url) {
+  try {
+    let response = await fetch(`${sort_url}`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    if (response.ok) {
+      let product_data = await response.json();
+      // console.log(product_data);
+      hideLoading()
+      renderData(product_data);
+    } else {
+      console.dir(response);
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+let span = document.querySelectorAll('span');
+console.log(span);
+
+for (let btn of span) {
+  btn.addEventListener("click", (event) => {
+    loading()
+    console.log(btn.innerText);
+    let sort_url =
+      `${baseURL}/products/?product_name=${btn.innerText}`;
+      fetchSortedData(sort_url);
+  });
+}
