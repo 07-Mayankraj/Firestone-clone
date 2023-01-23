@@ -12,13 +12,21 @@ form.addEventListener('submit',function(event){
         email:form.email.value,
         password:form.password.value,
     }
-    body.style.backgroundImage = "url('https://img.rawpixel.com/private/static/images/website/2022-05/pf-s124-ak-2615_2.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=c77077de245e55401603da8711ee87a7')";
-    login(user);
-    loading()
+    console.log(user);
+    
+
+        body.style.backgroundImage = "url('https://img.rawpixel.com/private/static/images/website/2022-05/pf-s124-ak-2615_2.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=c77077de245e55401603da8711ee87a7')";
+        login(user);
+        loading()
+    
 }) 
 
 
 const login = async(user) =>{
+    if(user.email =="admin" && user.password =="admin"){
+        window.location.href = "../routes/admin_panel.html"  
+        return
+    }
     try {
 
         const res = await fetch(`${baseurl}/users/login`,{

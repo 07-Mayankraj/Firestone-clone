@@ -58,6 +58,13 @@ function getCard(data) {
                 <button type="button" id ="${ele._id}" class="btn delete-btn btn-danger btn-block">Delete</button>
                 </div>
                 <div class="product-reviews">
+                <p>${ele.product_specs}</p>
+                    <p>${ele.traction}</p>
+                    <p>${ele.noise_level}</p>
+                    <p>${ele.wet_traction}</p>
+                    <p>${ele.tire_wear}</p>
+                    <p>${ele.ride_comfort}</p>
+                    <p>${ele.dry_traction}</p>
                         <p>⭐⭐⭐⭐&#160${ele.review_count}</p>
                 </div>
             </div>
