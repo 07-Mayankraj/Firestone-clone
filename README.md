@@ -1,31 +1,73 @@
-# merry-limit-3360 https://firewheeeeeel.netlify.app/
-  Fire is a clone Firestone which is company which sales automobile parts and
-# Frontend: 
-  ```Frontend is designed in HTML CSS and JavaScript.```
+#   [FireWheeeel](https://firewheeeeeel.netlify.app/)
 
-#backend
-  ``` node express mongo db bcrypt json Web token mongoose```
-  For the runtime environment Node js
+ ## FireWheel is a clone Firestone which sales Tires,automobile-parts and provdies services.
+
+---
+
+<br>
+
+# Frontend Of Firewheel: 
+
+<br>
+
+For Frontend is designed `HTML` `CSS` and `JavaScript`. <br>
+Externally library used in FireWheel `Bootstrap`.
+
+* Home page
+* products page
+* Login page
+* Signup page
+* Admin panel
+       
+
+
+
+# backend of Firewheel -> [BaseURL](https://rich-ruby-kitten-toga.cyclic.app)
+
+## npm packages used in Firewheel
+
+   * express     : for setup the server 
+   * mongoose    : for makign connections between server and mongodb
+   * JWT         : for jwt authentication
+   * bcrypt      : for encrypting the password
+
+## Database
+
+   * MongoDB     : for storing details 
+
+* nodemon 
+ 
+<br>
+ <hr>
+<br>
 
   
 
 # API endpoints
 
 ## user
-    login ->    localhost:3500/users/login    {post}
-    register -> localhost:3500/users/register  {post}
+```javascript
+    login    ->    localhost:3500/users/login    {post}
+    register ->    localhost:3500/users/register  {post}
+```
+
 ## product
+```javascript
     getall      ->   localhost:3500/products/
     getById     ->   localhost:3500/products/:id
     update      ->   localhost:3500/products/update/:id
     delete      ->   localhost:3500/products/delete/:id
     filter      ->   localhost:3500/products/filter?product_rating
     find qurey  ->   localhost:3500/products/?product_name=1212121212121212raj (anything from schema)
+```
 
-    
+---
+
 ## body for update or create new 
-    post    ->     localhost:3500/products/add
 
+Method :  post -> localhost:3500/products/add
+
+```javascript
     {
     "product_id": 332,
     "product_img": "https://assets.firestonecompleteautocare.com/content/dam/bsro-sites/global/images/tires/full-60/h175/TuranzaEL40002RFT.png",
@@ -43,12 +85,15 @@
     "noise_level": "Noise Level: Mayank",
     "__v": 0
     }
+```
 
 ## cart
+
+```javascript
     getall ->   localhost:3500/cart/
     add    ->   localhost:3500/cart/add
     delete ->   localhost:3500/cart/delete/:id
-
+```
 # cart flow design
 ![cartoperations](https://user-images.githubusercontent.com/87657007/213551092-2d5992b1-29f2-4731-9174-efad13874eb5.png)
 
