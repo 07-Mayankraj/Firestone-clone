@@ -1,4 +1,14 @@
 # merry-limit-3360 https://firewheeeeeel.netlify.app/
+  Fire is a clone Firestone which is company which sales automobile parts and
+# Frontend: 
+  ```Frontend is designed in HTML CSS and JavaScript.```
+
+#backend
+  ``` node express mongo db bcrypt json Web token mongoose```
+  For the runtime environment Node js
+
+  
+
 # API endpoints
 
 ## user
